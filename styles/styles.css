@@ -1,0 +1,41 @@
+@import url("https://fonts.cdnfonts.com/css/neucha");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --white: #fff;
+  --transwhite: #d7ccc0;
+  --light: #f5f4f0;
+  --orange: #fe8a02;
+  --maindark: #42413c;
+  --dark: #2a2626;
+  --transdark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Neucha", sans-serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
