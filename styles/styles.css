@@ -14,7 +14,19 @@
   --blue: #1085c5;
 }
 
+body::before {
+  position: absolute;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.1;
+}
+
 body {
+  max-width: 1440px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6em;
@@ -26,6 +38,7 @@ h2,
 h3 {
   font-family: "Neucha", sans-serif;
   line-height: 1.2em;
+  font-weight: 400;
 }
 
 h1 {
@@ -38,4 +51,34 @@ h2 {
 
 h3 {
   font-size: 34px;
+}
+
+.section1 {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__title {
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__uptitle {
+  color: var(--orange);
+}
+
+.header__subtitle {
+  color: var(--dark);
+}
+
+.header__img {
+  position: absolute;
+  height: 525px;
+  top: 55px;
+  right: -270px;
 }
