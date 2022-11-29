@@ -10,24 +10,16 @@
   --blue: #1085c5;
 }
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
 body {
-  min-width: 1110px;
-  max-width: 1440px;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6em;
   color: #2a2626;
-}
-
-main {
-  position: relative;
 }
 
 h1,
@@ -50,34 +42,49 @@ h3 {
   font-size: 34px;
 }
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 100px 0;
+/* Header*/
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  overflow: hidden;
+  background-color: var(--light);
 }
 
-/* Header*/
-.header::before {
+.background-basic::before {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background: url(../images/background.png);
+  background-image: url(/images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
   content: "";
 }
 
+/* Container */
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
 /* Header Titles*/
 .header__title {
+  z-index: 10;
+  position: relative;
   font-weight: 400;
   line-height: 86px;
   color: var(--orange);
 }
 
-.header__suptitle {
+.header__subtitle {
+  z-index: 10;
+  position: relative;
   font-weight: 400;
   line-height: 100%;
   color: var(--dark);
@@ -85,27 +92,45 @@ h3 {
 
 /*Header Image*/
 .header__image {
-  position: absolute;
+  position: relative;
   height: 525px;
-  top: 55px;
-  right: -270px;
+  right: -298px;
+  top: -302px;
 }
 
 /*Header Column*/
-
-.header__text {
-  position: relative;
+.header__columns {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  margin-top: -320px;
+}
+
+.header__left__col {
+  flex-basis: 50%;
+  margin-right: 30px;
+}
+
+.header__right__col {
+  flex-basis: 50%;
+}
+
+.header__columns p {
+  margin: 0;
 }
 
 /*Header Button*/
 .header__button {
-  position: relative;
-  padding: 12px 24px;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  width: 148px;
+  height: 49px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--white);
   background-color: var(--orange);
   text-decoration: none;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
 }
